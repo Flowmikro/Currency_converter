@@ -8,10 +8,10 @@ app = Flask(__name__)
 @app.route('/api/rates', methods=['GET'])
 def get_rates():
     """Получаем с конвертированную валюту """
-    to_currency = request.args.get('to')
-    from_currency = request.args.get('from')
-    amount_currency = request.args.get('value')
-    result = convert_currency(to_currency, from_currency, amount_currency)
+    to_currency = request.args.get('to')  # to=RUB
+    from_currency = request.args.get('from')  # from=USD
+    amount_currency = request.args.get('value')  # value=1
+    result = convert_currency(to_currency, from_currency, amount_currency)  # вызываем функцию для
     return jsonify({'result': result})
 
 
