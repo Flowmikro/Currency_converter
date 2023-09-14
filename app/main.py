@@ -5,7 +5,7 @@ from services import convert_currency
 app = Flask(__name__)
 
 
-@app.route('/api/rates', methods=['GET'])
+@app.route('/api/rates', methods=['GET'])  # http://127.0.0.1:5000/api/rates?from=USD&to=RUB&value=5
 def get_rates():
     """Получаем с конвертированную валюту """
     to_currency = request.args.get('to')  # to=RUB
