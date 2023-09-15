@@ -11,7 +11,7 @@ def get_rates():
     to_currency = request.args.get('to')  # to=RUB
     from_currency = request.args.get('from')  # from=USD
     amount_currency = request.args.get('value')  # value=1
-    result = convert_currency(to_currency, from_currency, amount_currency)  # вызываем функцию для
+    result = convert_currency(to_currency, from_currency, amount_currency)
     return jsonify({'result': result})
 
 
